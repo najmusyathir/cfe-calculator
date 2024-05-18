@@ -1,0 +1,188 @@
+body {
+  background: #e5e5e5;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #122a5f;
+}
+
+.btn,
+input {
+  border: 1px #e5e5e5 solid;
+  width: fit-content;
+  padding: 5px 10px;
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  margin: 10px;
+}
+
+p {
+  text-align: justify;
+  max-width: 65ch;
+}
+
+form {
+  border: 1px solid #122a5f;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  width: calc(100% - 60px);
+  max-width: 500px;
+}
+
+select {
+  border: 1px solid 122a5f;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.15;
+
+  option {
+    font-size: 1.03rem;
+  }
+}
+
+section {
+  margin: 10px;
+  padding: 10px 20px;
+  height: auto;
+  border-radius: 25px;
+  max-width: 500px;
+}
+
+img {
+  display: block;
+}
+
+input [type="checkbox"] {
+  width: fit-content;
+}
+
+input[type="radio"] {
+  accent-color: #fca311;
+  outline: #fca311;
+  border: #fca311 1px solid;
+  color: #fca311;
+
+  &:checked {
+    accent-color: #fca311;
+    outline: #fca311;
+    border: #fca311 1px solid;
+    color: #fca311;
+  }
+}
+
+input[type="radio"]::selection {
+  outline: none;
+}
+
+[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  background: white;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+label {
+  margin: 15px 0;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: #0009;
+  >*{
+    color: #0009;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.question {
+  font-weight: 600;
+  font-size: 1.2;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  display: flex;
+  align-items: center;
+}
+.justify-center {
+  display: flex;
+  justify-items: center;
+}
+
+#cal {
+  padding: 10px 20px;
+  margin: 20px;
+  background: #122a5f;
+  border-radius: 10px;
+  color: #fca311;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#result h2 {
+  text-align: center;
+  font-size: 2.75rem;
+}
+.huge {
+  font-size: 2.25rem;
+}
+#result h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#result p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#result img {
+  max-width: 400px;
+  width: calc(100% - 40px);
+  padding: 0 20px;
+}

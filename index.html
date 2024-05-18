@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CFE Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <section>
+          <h1>Carbon Footprint Emissions Calculator</h1>
+          <p>
+            This calculator intents to help support users inconsidering carbon
+            footprint emissions, payback options and chances of avoiding high
+            CO₂ emissions.
+          </p>
+        </section>
+
+        <form id="form" class="flex-col justify-center items-center">
+          <div class="flex-col w-full">
+            <h3 class="question">1. Which eateries do you prefer to eat?</h3>
+            <div>
+              <input type="radio" id="Mess's Cadet" name="location" checked />
+              <label for="mess">Mess's Cadet</label>
+            </div>
+            <div>
+              <input type="radio" id="Poolside cafe" name="location" />
+              <label for="poolside">Poolside cafe</label>
+            </div>
+            <div>
+              <input type="radio" id="Kasturi cafe" name="location" />
+              <label for="kasturi">Kasturi cafe</label>
+            </div>
+          </div>
+          <div>
+            <h3 for="weight" class="question">
+              2. What is the average amout of weight that you throw every time
+              you eat?
+            </h3>
+            <div><input type="text" id="weight" required /> kg</div>
+          </div>
+
+          <div>
+            <h3 for="days" class="question">
+              3. How many times do you eat at eateries in a week?
+            </h3>
+            <select id="days">
+              <option value="1">1 days</option>
+              <option value="2">2 days</option>
+              <option value="3">3 days</option>
+              <option value="4">4 days</option>
+              <option value="5">5 days</option>
+              <option value="6">6 days</option>
+              <option value="7">7 days</option>
+            </select>
+          </div>
+
+          <input type="submit" value="Calculate" id="cal" />
+        </form>
+      </div>
+
+      <div id="result" style="color: black">
+        <section style="background: #fca311">
+          <h2>Check Now!</h2>
+
+          <p>Find the carbon footprint emission at your target location NOW</p>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <footer>
+        <p>&copy; 2024 Hazlina Esa | CFE Calculator</p>
+      </footer>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const weightInput = document.getElementById("weight");
+
+      weightInput.addEventListener("keypress", function (event) {
+        const key = event.key;
+
+        if (!/\d/.test(key) && key !== "." && key !== "Backspace") {
+          event.preventDefault();
+        }
+
+        if (key === "." && weightInput.value.includes(".")) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>
